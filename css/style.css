@@ -1,0 +1,97 @@
+/* 
+  ==================
+    CSS Reset
+  ================== 
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  border: 1px solid black;
+}
+
+.col-1 {
+  height: 50%;
+  background: pink;
+}
+
+.title-top,
+.title-middle,
+.title-bottom {
+  border: 1px solid black;
+  margin: 2.5em;
+  text-align: center;
+}
+
+.col-2 {
+  height: 50%;
+  background: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  border: 1px solid black;
+  margin: 3em;
+  padding: 3em;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+}
+
+.register:hover,
+.register:focus {
+  cursor: pointer;
+}
+
+/* 
+  ==================
+    Media Query
+  ================== 
+*/
+
+@media only screen and (min-width: 950px) {
+  body {
+    flex-direction: row;
+  }
+
+  .column {
+    border: 1px solid black;
+  }
+
+  .col-1 {
+    height: 100%;
+    width: 55%;
+    background: pink;
+  }
+
+  .col-2 {
+    height: 100%;
+    width: 45%;
+    background: aliceblue;
+  }
+}
