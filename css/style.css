@@ -4,6 +4,13 @@
   ================== 
 */
 
+/* 
+#F18119
+#404040
+
+#FF713B-#FFA61D
+*/
+
 *,
 *:before,
 *:after {
@@ -19,9 +26,31 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #404040;
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+}
+
+h1 + p {
+  color: #f18119;
+  font-size: 1.3125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.3125rem;
+}
+
+strong {
+  font-weight: 900;
 }
 
 .column {
@@ -29,35 +58,54 @@ body {
 }
 
 .col-1 {
-  height: 50%;
-  background: pink;
+  background: #404040;
+  background-image: url(../assets/dark-ribs.jpg);
+  color: #fff;
+  padding: 0 2.5em 1em;
+  display: flex;
+  flex-flow: column;
 }
 
-.title-top,
-.title-middle,
-.title-bottom {
-  border: 1px solid black;
-  margin: 2.5em;
-  text-align: center;
+.col-1 .top-text {
+  order: -1;
+}
+
+.col-1 h1 {
+  order: 0;
+}
+
+.col-1 p {
+  order: 1;
 }
 
 .col-2 {
-  height: 50%;
   background: aliceblue;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.top-text {
+  font-size: 0.625rem;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sub-title {
+  text-transform: uppercase;
+}
+
 .form-container {
   border: 1px solid black;
-  margin: 3em;
-  padding: 3em;
+  margin: 1em;
+  margin-bottom: 4em;
   text-align: center;
 }
 
 input {
-  width: 100%;
+  width: 70%;
   margin: 1em 0;
   padding: 1em;
   border-radius: 10px;
@@ -66,9 +114,22 @@ input {
   text-transform: uppercase;
 }
 
+.register {
+  background: linear-gradient(to left, #ff713b, #ffa61d);
+  color: #fff;
+  transition: 0.3s;
+}
+
 .register:hover,
 .register:focus {
   cursor: pointer;
+}
+
+.disclaimer {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 0.625rem;
+  letter-spacing: 1px;
 }
 
 /* 
@@ -96,5 +157,10 @@ input {
     height: 100%;
     width: 45%;
     background: aliceblue;
+  }
+
+  .form-container {
+    margin: 3em;
+    padding: 3em;
   }
 }
