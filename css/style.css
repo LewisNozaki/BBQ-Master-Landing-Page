@@ -54,31 +54,35 @@ strong {
   font-weight: 900;
 }
 
-.column {
-  border: 1px solid black;
-}
-
 .col-1 {
   background: #404040;
   background-image: url(../assets/dark-ribs.jpg);
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 0.5em 2em;
   display: flex;
-  flex-flow: column;
+  justify-content: center;
+  align-tracks: center;
+  padding: 2em;
 }
 
-.col-1 .top-text {
-  order: -1;
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.col-1 h1 {
+.title-container .top-text {
   order: 0;
 }
 
-.col-1 p {
+.title-container h1 {
   order: 1;
+  text-transform: uppercase;
+}
+
+.title-container p {
+  order: 2;
 }
 
 .col-2 {
@@ -97,14 +101,17 @@ strong {
 
 .sub-title {
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 1em;
 }
 
 .form-container {
-  /* border: 1px solid black; */
   margin: 1em;
-  margin-bottom: 4em;
   text-align: center;
+  padding: 2em;
+}
+
+.info {
+  line-height: 1.5em;
 }
 
 input {
@@ -141,29 +148,45 @@ input {
   ================== 
 */
 
+/* 950px and up */
 @media only screen and (min-width: 950px) {
   body {
     flex-direction: row;
   }
 
-  .column {
-    border: 1px solid black;
-  }
-
   .col-1 {
     height: 100%;
     width: 55%;
-    background: pink;
   }
 
   .col-2 {
     height: 100%;
     width: 45%;
-    background: aliceblue;
+    background: rgb(232, 232, 232);
   }
 
   .form-container {
     margin: 3em;
     padding: 3em;
+  }
+
+  .title-container {
+    /* border: 1px solid white; */
+    padding: 0 2em;
+    justify-content: space-around;
+  }
+
+  .title-container h1 {
+    font-size: 5em;
+  }
+
+  .title-container .top-text {
+    font-size: 1em;
+  }
+
+  .title-container p {
+    font-size: 3em;
+    position: relative;
+    /* bottom: 200px; */
   }
 }
