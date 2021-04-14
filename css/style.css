@@ -106,14 +106,13 @@ strong {
 }
 
 .form-container {
-  /* margin: 1em; */
   text-align: center;
   padding: 2em;
 }
 
 .title-container > *,
 .form-container > * {
-  max-width: 600px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -177,7 +176,6 @@ input {
   }
 
   .form-container {
-    border: 1px solid black;
   }
 
   .info {
@@ -186,7 +184,6 @@ input {
   }
 
   .title-container {
-    border: 1px solid white;
   }
 
   .title-container h1 {
@@ -196,5 +193,13 @@ input {
   }
 
   .title-container p {
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }
