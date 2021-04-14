@@ -56,8 +56,9 @@ strong {
 
 .col-1 {
   min-height: 50vh;
-  background: #404040;
-  background-image: url(../assets/dark-ribs.jpg);
+  background-color: #404040;
+  background-image: url(../assets/ribs.jpg);
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -98,6 +99,8 @@ strong {
   color: #f18119;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border-top: 3px solid #f18119;
+  margin: 0;
 }
 
 .sub-title {
@@ -129,17 +132,28 @@ input {
   border: 1px solid lightgrey;
   text-align: center;
   text-transform: uppercase;
+  transition: transform 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="text"]:active,
+input[type="email"]:focus,
+input[type="email"]:active {
+  transform: scale(1.09);
 }
 
 .register {
   background: linear-gradient(to left, #ff713b, #ffa61d);
   color: #fff;
-  transition: 0.3s;
+  transform: scale(1);
+  transition: transform 0.3s;
 }
 
 .register:hover,
 .register:focus {
   cursor: pointer;
+  color: #333;
+  transform: scale(1.09);
 }
 
 .disclaimer {
